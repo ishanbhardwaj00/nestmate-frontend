@@ -112,7 +112,7 @@ export default () => {
                     })}
                     type="email"
                     placeholder="Email Address"
-                    className="outline-none overflow-scroll"
+                    className="outline-none w-4/5 focus:ring-0 focus:outline-none"
                   />
                 </div>
                 {/* <input
@@ -146,7 +146,7 @@ export default () => {
                       },
                     })}
                     placeholder="Password"
-                    className="outline-none"
+                    className="outline-none w-4/5 focus:ring-0 focus:outline-none"
                   />
                 </div>
                 {errors.password && (

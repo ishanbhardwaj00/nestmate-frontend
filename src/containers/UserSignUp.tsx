@@ -83,7 +83,7 @@ export default ({
                     required: 'Email is required',
                   })}
                   placeholder="Email Address"
-                  className="outline-none overflow-scroll"
+                  className="outline-none w-4/5 focus:ring-0 focus:outline-none"
                 />
               </div>
               {errors.email && (
@@ -109,7 +109,7 @@ export default ({
                     },
                   })}
                   placeholder="Password"
-                  className="outline-none overflow-scroll px-2"
+                  className="outline-none w-4/5 focus:ring-0 focus:outline-none"
                 />
               </div>
               {errors.password && (
@@ -127,7 +127,7 @@ export default ({
                       value === getValues('password') || 'Passwords must match',
                   })}
                   placeholder="Confirm Password"
-                  className="outline-none overflow-scroll"
+                  className="outline-none w-4/5 focus:ring-0 focus:outline-none"
                 />
               </div>
               {errors.confirmPassword && (
