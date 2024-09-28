@@ -46,7 +46,7 @@ const Profile = () => {
       onClick: async () => {
         try {
           const response = await axios.get(
-            'https://nestmate-backend-9f3d331450ee.herokuapp.com/api/users/logout',
+            'https://nestmate-backend-production.up.railway.app/api/users/logout',
             { withCredentials: true }
           )
           setAuthenticated(false)

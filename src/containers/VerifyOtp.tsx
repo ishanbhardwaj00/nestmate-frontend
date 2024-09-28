@@ -65,7 +65,7 @@ const VerifyOtp = ({
               // )
               try {
                 const verifyResponse = await axios.post(
-                  'https://nestmate-backend-9f3d331450ee.herokuapp.com/api/users/verifyOTP',
+                  'https://nestmate-backend-production.up.railway.app/api/users/verifyOTP',
                   { email: userCredentials!.email, ...data }
                 )
 
@@ -75,7 +75,7 @@ const VerifyOtp = ({
                   console.log(userCredentials)
 
                   const response = await axios.post(
-                    'https://nestmate-backend-9f3d331450ee.herokuapp.com/api/users/signup',
+                    'https://nestmate-backend-production.up.railway.app/api/users/signup',
                     {
                       email: userCredentials!.email,
                       password: userCredentials!.password,

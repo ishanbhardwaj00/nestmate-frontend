@@ -12,7 +12,7 @@ export default ({ children }) => {
     async function getUserChats() {
       try {
         const response = await axios.get(
-          'https://nestmate-backend-9f3d331450ee.herokuapp.com/chats',
+          'https://nestmate-backend-production.up.railway.app/chats',
           {
             withCredentials: true,
           }
@@ -42,7 +42,7 @@ export default ({ children }) => {
   const [chats, setChats] = useState(null)
   const [chatError, setChatError] = useState<string | null>(null)
   const { sendJsonMessage, lastMessage, readyState } = useWebSocket(
-    'wss://nestmate-backend-9f3d331450ee.herokuapp.com'
+    'wss://nestmate-backend-production.up.railway.app'
   )
   useEffect(() => {
     if (lastMessage) {

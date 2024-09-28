@@ -17,7 +17,7 @@ export default ({ children }: { children: ReactNode }) => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          'https://nestmate-backend-9f3d331450ee.herokuapp.com/users',
+          'https://nestmate-backend-production.up.railway.app/users',
           {
             withCredentials: true,
           }

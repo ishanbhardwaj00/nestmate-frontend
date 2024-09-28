@@ -43,7 +43,7 @@ const UserChat = () => {
 
         try {
           axios.post(
-            'https://nestmate-backend-9f3d331450ee.herokuapp.com/api/chats/read',
+            'https://nestmate-backend-production.up.railway.app/api/chats/read',
             { receiver: userId },
             { withCredentials: true }
           )
@@ -76,7 +76,7 @@ const UserChat = () => {
     if (matches) {
       async function getUser() {
         const response = await axios.get(
-          `https://nestmate-backend-9f3d331450ee.herokuapp.com/users/${userId}`,
+          `https://nestmate-backend-production.up.railway.app/users/${userId}`,
           {
             withCredentials: true,
           }

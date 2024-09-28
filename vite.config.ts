@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/backend': {
-        target: 'https://nestmate-backend-9f3d331450ee.herokuapp.com/', // Target server
+        target: 'https://nestmate-backend-production.up.railway.app', // Target server
         changeOrigin: true, // Change the origin of the host header to the target URL
         rewrite: (path) => path.replace(/^\/backend/, ''), // Rewrite /api to remove it when forwarding to backend
       },

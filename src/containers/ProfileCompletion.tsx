@@ -73,7 +73,7 @@ export default ({ setStep }: { setStep: any }) => {
             const img = image?.split(',')[1]
             try {
               const response = await axios.post(
-                'https://nestmate-backend-9f3d331450ee.herokuapp.com/api/users/verifyImage',
+                'https://nestmate-backend-production.up.railway.app/api/users/verifyImage',
                 { img }
               )
               const { success, msg } = response.data
@@ -82,7 +82,7 @@ export default ({ setStep }: { setStep: any }) => {
               } else {
                 console.log(...userInformation.entries())
                 const response = await axios.put(
-                  'https://nestmate-backend-9f3d331450ee.herokuapp.com/api/users/signup',
+                  'https://nestmate-backend-production.up.railway.app/api/users/signup',
                   userInformation,
                   {
                     withCredentials: true,

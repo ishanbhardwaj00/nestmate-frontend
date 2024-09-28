@@ -37,7 +37,7 @@ export default function AuthContextProvider({
     async function checkAuth() {
       try {
         const response = await axios.get(
-          'https://nestmate-backend-9f3d331450ee.herokuapp.com/api/users/checkAuth',
+          'https://nestmate-backend-production.up.railway.app/api/users/checkAuth',
           {
             withCredentials: true,
           }
