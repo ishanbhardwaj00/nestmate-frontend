@@ -7,6 +7,8 @@ import axios from 'axios'
 import { PulseLoader } from 'react-spinners'
 import { UserCredentialsType } from '../types/types'
 import { useNavigate } from 'react-router-dom'
+import { FaChevronLeft } from 'react-icons/fa'
+import { IoMail } from 'react-icons/io5'
 
 export default ({
   setStep,
@@ -29,13 +31,15 @@ export default ({
   const [requestPending, setRequestPending] = useState(false)
 
   return (
-    <div className="flex flex-col items-center bg-step2 bg-contain bg-no-repeat h-screen max-h-screen bg-bottom animateRegistration">
-      <div className="w-3/4 flex flex-col justify-start mt-10 gap-24">
+    <div className="flex flex-col items-center bg-step2 bg-contain bg-no-repeat h-screen max-h-screen bg-bottom">
+      <div className="w-3/4 flex flex-col justify-start mt-10 gap-24 animateRegistration">
         <div className="flex flex-col gap-12">
           <button className="text-black" onClick={() => navigate('/')}>
-            <GoArrowLeft size={24} />
+            <FaChevronLeft color="#232beb" size={24} />
           </button>
-          <div className={`flex flex-col text-4xl font-bold text-primary `}>
+          <div
+            className={`flex flex-col text-4xl font-poppins-bold text-primary `}
+          >
             <span>Secure Your </span>
             <span>Access &</span>
             <span>Login Anytime!</span>
@@ -71,52 +75,61 @@ export default ({
         >
           <div className="flex flex-col gap-3">
             <div className="flex flex-col gap-1">
-              <input
-                className="w-full outline-1 outline p-4 outline-black rounded-full focus:outline-2"
-                type="email"
-                {...register('email', {
-                  required: 'Email is required',
-                })}
-                placeholder="Email Address"
-              />
+              <div className="flex gap-4 w-full outline-1 outline px-6 py-4 outline-button-radio-button rounded-full focus:outline-2">
+                <IoMail size={21} color="#B8B8B8" className="flex-shrink-0" />
+                <input
+                  type="email"
+                  {...register('email', {
+                    required: 'Email is required',
+                  })}
+                  placeholder="Email Address"
+                  className="outline-none "
+                />
+              </div>
               {errors.email && (
                 <ErrorMessage text={errors.email.message as string} />
               )}
             </div>
             <div className="flex flex-col gap-1 ">
-              <input
-                className="w-full outline-1 outline p-4 outline-black rounded-full focus:outline-2"
-                type="password"
-                {...register('password', {
-                  required: 'password is required',
-                  minLength: {
-                    value: 10,
-                    message: 'Password should be at least 10 characters',
-                  },
-                  validate: (data) => {
-                    return (
-                      !(passwordStrength(data).id < 1) ||
-                      'Password is too weak. Add numbers and special characters to it.'
-                    )
-                  },
-                })}
-                placeholder="Password"
-              />
+              <div className="flex gap-4 w-full outline-1 outline px-6 py-4 outline-button-radio-button rounded-full focus:outline-2">
+                <IoMail size={21} color="#B8B8B8" className="flex-shrink-0" />
+                <input
+                  type="password"
+                  {...register('password', {
+                    required: 'password is required',
+                    minLength: {
+                      value: 10,
+                      message: 'Password should be at least 10 characters',
+                    },
+                    validate: (data) => {
+                      return (
+                        !(passwordStrength(data).id < 1) ||
+                        'Password is too weak. Add numbers and special characters to it.'
+                      )
+                    },
+                  })}
+                  placeholder="Password"
+                  className="outline-none "
+                />
+              </div>
               {errors.password && (
                 <ErrorMessage text={errors.password.message!.toString()} />
               )}
             </div>
             <div className="flex flex-col gap-1">
-              <input
-                className="w-full outline-1 outline p-4 outline-black rounded-full focus:outline-2"
-                type="password"
-                {...register('confirmPassword', {
-                  required: 'Confirm password is required',
-                  validate: (value) =>
-                    value === getValues('password') || 'Passwords must match',
-                })}
-                placeholder="Password"
-              />
+              <div className="flex gap-4 w-full outline-1 outline px-6 py-4 outline-button-radio-button rounded-full focus:outline-2">
+                <IoMail size={21} color="#B8B8B8" className="flex-shrink-0" />
+                <input
+                  type="password"
+                  {...register('confirmPassword', {
+                    required: 'Confirm password is required',
+                    validate: (value) =>
+                      value === getValues('password') || 'Passwords must match',
+                  })}
+                  placeholder="Confirm Password"
+                  className="outline-none "
+                />
+              </div>
               {errors.confirmPassword && (
                 <ErrorMessage
                   text={errors.confirmPassword.message!.toString()}

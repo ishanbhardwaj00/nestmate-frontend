@@ -8,6 +8,7 @@ import axios from 'axios'
 import { UserContext } from '../contexts/userContext'
 import { useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie'
+import { FaChevronLeft } from 'react-icons/fa'
 
 export default ({ setStep }: { setStep: any }) => {
   const { userInformation } = useContext(UserContext)
@@ -40,7 +41,7 @@ export default ({ setStep }: { setStep: any }) => {
   if (loading) return <Loading />
   return (
     <div className="flex flex-col items-center justify-center h-screen max-h-screen bg-bottom animateRegistration">
-      <div className="w-3/4  flex flex-col justify-evenly gap-16 mt-16">
+      <div className="w-3/4  flex flex-col justify-evenly gap-8 mt-8">
         <button
           onClick={async () => {
             const response = await axios.post(
@@ -54,9 +55,9 @@ export default ({ setStep }: { setStep: any }) => {
             setStep((step: number) => step - 2)
           }}
         >
-          <GoArrowLeft size={24} />
+          <FaChevronLeft color='#232beb' size={24} />
         </button>
-        <div className={`flex flex-col text-4xl font-bold text-primary `}>
+        <div className={`flex flex-col text-4xl font-poppins-bold text-primary `}>
           <span>Quick Intro!</span>
           <span>Who's Moving </span>
           <span>In?</span>
@@ -76,9 +77,9 @@ export default ({ setStep }: { setStep: any }) => {
           className="flex flex-col gap-8"
         >
           <div className="flex flex-col gap-2">
-            <p className="text-black font-bold ml-2">Your Full Name*</p>
+            <p className="text-button-radio-button font-poppins-medium ml-2">Your Full Name*</p>
             <input
-              className="w-full outline-1 outline p-4 outline-black rounded-full focus:outline-2"
+              className="w-full outline-1 outline p-4 outline-button-radio-button rounded-full focus:outline-2"
               type="text"
               {...register('fullName', {
                 required: 'This field is required',
@@ -90,9 +91,9 @@ export default ({ setStep }: { setStep: any }) => {
             )}
           </div>
           <div className="flex flex-col gap-2">
-            <p className="text-black font-bold ml-2">Your Birth Date*</p>
+            <p className="text-black font-poppins-medium ml-2">Your Birth Date*</p>
             <input
-              className="w-full outline-1 outline p-4 text-black outline-black rounded-full focus:outline-1"
+              className="w-full outline-1 outline p-4 text-black outline-button-radio-button rounded-full focus:outline-1"
               type="date"
               {...register('dateOfBirth', {
                 required: 'Date is required',
@@ -119,9 +120,9 @@ export default ({ setStep }: { setStep: any }) => {
             )}
           </div>
           <div className="flex flex-col gap-2">
-            <p className="text-black font-bold ml-2">Your Pincode*</p>
+            <p className="text-button-radio-button font-poppins-medium ml-2">Your Pincode*</p>
             <input
-              className="w-full outline-1 outline p-4 text-black outline-black rounded-full focus:outline-1"
+              className="w-full outline-1 outline p-4 text-button-radio-button outline-button-radio-button rounded-full focus:outline-1"
               type="text"
               placeholder="110065"
               {...register('pinCode', {
@@ -153,15 +154,15 @@ export default ({ setStep }: { setStep: any }) => {
             )}
           </div>
           <div className="flex flex-col gap-2">
-            <p className="text-black font-bold ml-2">What's your gender?</p>
-            <div className="flex flex-col gap-1">
+            <p className="text-button-radio-button font-poppins-medium ml-2">What's your gender?</p>
+            <div className="flex flex-col gap-2">
               {['Male', 'Female', 'Other'].map((gender) => (
                 <label
                   key={gender}
                   htmlFor={gender}
-                  className="flex p-4 bg-button-radio w-full justify-between rounded-full text-button-radio-button"
+                  className="flex py-3 px-4 bg-button-radio w-full justify-between rounded-full text-button-radio-button"
                 >
-                  <span>{gender}</span>
+                  <span className='text-button-radio-button text-sm'>{gender}</span>
                   <input
                     className="rounded-full w-5 h-5 outline-none border-primary"
                     {...register('gender', {

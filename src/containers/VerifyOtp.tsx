@@ -4,6 +4,7 @@ import { UserCredentialsType } from '../types/types'
 import axios from 'axios'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { FaChevronLeft } from 'react-icons/fa'
 import { GoArrowLeft } from 'react-icons/go'
 import { BarLoader } from 'react-spinners'
 
@@ -44,9 +45,9 @@ const VerifyOtp = ({
     <div className="flex flex-col items-center bg-step1 bg-contain bg-no-repeat h-screen max-h-screen bg-bottom animateRegistration ">
       <div className="w-3/4 flex flex-col justify-start mt-10 gap-16">
         <button onClick={() => setStep((step) => step - 1)}>
-          <GoArrowLeft size={24} />
+          <FaChevronLeft color='#232beb' size={24} />
         </button>
-        <div className={`flex flex-col text-4xl font-bold text-primary `}>
+        <div className={`flex flex-col text-4xl font-poppins-bold text-primary `}>
           <span>We've</span>
           <span>Sent You</span>
           <span>A Code</span>
@@ -55,7 +56,7 @@ const VerifyOtp = ({
         <div className={`flex flex-col gap-7`}>
           <form
             autoComplete="off"
-            className="flex flex-col gap-2"
+            className="flex flex-col gap-3"
             onSubmit={handleSubmit(async (data) => {
               console.log(data)
               setLoading(true)
@@ -96,7 +97,7 @@ const VerifyOtp = ({
               }
             })}
           >
-            <span className={`ml-3 text-sm font-medium`}>6 Digit OTP*</span>
+            <span className={`ml-3 text-sm font-poppins-medium text-button-radio-button`}>6 Digit OTP*</span>
             <input
               {...register('otp', {
                 required: 'This field is required',

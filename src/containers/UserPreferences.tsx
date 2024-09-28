@@ -5,6 +5,7 @@ import Loading from '../components/Loading'
 import ErrorMessage from '../components/ErrorMessage'
 import { GoArrowLeft } from 'react-icons/go'
 import { UserContext } from '../contexts/userContext'
+import { FaChevronLeft } from 'react-icons/fa'
 
 const locations = [
   'Near Cyberhub',
@@ -37,10 +38,10 @@ export default ({ setStep }: { setStep: any }) => {
     <div className="flex flex-col items-center justify-center bg-custom-pattern bg-no-repeat bg-center bg-cover animateRegistration overflow-scroll">
       <div className="w-3/4  my-16 flex flex-col justify-between gap-14">
         <button onClick={() => setStep((step: number) => step - 1)}>
-          <GoArrowLeft size={24} />
+          <FaChevronLeft color='#232beb' size={24} />
         </button>
         <div className="flex flex-col gap-2">
-          <div className={`flex flex-col text-4xl font-bold text-primary `}>
+          <div className={`flex flex-col text-4xl font-poppins-bold text-primary `}>
             <span>What are your</span>
             <span>Roommate</span>
             <span>Preferences?</span>
@@ -60,10 +61,9 @@ export default ({ setStep }: { setStep: any }) => {
             console.log(preferences)
           })}
         >
-          <div className="flex flex-col text-button-radio-button font-semibold gap-2">
+          <div className="flex flex-col text-button-radio-button gap-2">
             <span>
-              <p className="text-sm">Where Would You Prefer To Stay?</p>
-              <p className="text-xs font-thin text-button-radio-button"></p>
+              <p className="text-sm font-poppins-medium">Where Would You Prefer To Stay?</p>
             </span>
             <div className="flex flex-col">
               {locations.map((location, index) => (
@@ -83,7 +83,7 @@ export default ({ setStep }: { setStep: any }) => {
                     })}
                   />
                   <div className="flex flex-col w-full gap-2">
-                    <span className="text-sm align-center font-normal w-max">
+                    <span className="text-sm align-center text-button-radio-button font-normal w-max">
                       {location}
                     </span>
                     <div className="w-full h-px bg-gray-300 "></div>
@@ -99,7 +99,7 @@ export default ({ setStep }: { setStep: any }) => {
           </div>
           <div className="flex flex-col text-button-radio-button font-semibold gap-2">
             <div className="flex flex-col gap-1">
-              <p className="text-sm">
+              <p className="text-sm font-poppins-medium">
                 Are you comfortable living with someone who consumes
                 non-vegetarian food?
               </p>
@@ -136,7 +136,7 @@ export default ({ setStep }: { setStep: any }) => {
           </div>
           <div className="flex flex-col text-button-radio-button font-semibold gap-2">
             <div className="flex flex-col gap-1">
-              <p className="text-sm">What is your preferred lease duration?</p>
+              <p className="text-sm font-poppins-medium">What is your preferred lease duration?</p>
               <p className="text-xs font-thin text-button-radio-button"></p>
               <div className="flex gap-1 flex-wrap ">
                 {['No lease', '3 months', '6 months', '12 months'].map(
