@@ -26,7 +26,7 @@ export default () => {
   }, [authenticated])
 
   return (
-    <div className="flex flex-col h-screen bg-home-light">
+    <div className="flex flex-col dvh bg-home-light">
       {/* <Header selected={selected} /> */}
       <Outlet />
       <Navigation setSelected={setSelected} selected={selected} />
