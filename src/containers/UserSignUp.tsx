@@ -109,7 +109,7 @@ export default ({
                     },
                   })}
                   placeholder="Password"
-                  className="outline-none overflow-scroll"
+                  className="outline-none overflow-scroll px-2"
                 />
               </div>
               {errors.password && (
