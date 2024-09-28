@@ -112,7 +112,7 @@ export default () => {
                     })}
                     type="email"
                     placeholder="Email Address"
-                    className="outline-none "
+                    className="outline-none overflow-scroll"
                   />
                 </div>
                 {/* <input
