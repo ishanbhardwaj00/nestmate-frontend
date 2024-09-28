@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 const Landing = () => {
-  console.log("Landing");
+  console.log('Landing')
 
   return (
-    <div className="flex flex-col h-screen max-h-screen bg-primary bg-custom-pattern bg-no-repeat bg-center bg-cover w-full items-center justify-center gap-8">
+    <div className="flex flex-col dvh bg-primary bg-custom-pattern bg-no-repeat bg-center bg-cover w-full items-center justify-center gap-8">
       <div className="flex flex-col items-center gap-2">
         <img className="w-full" src="/images/logo-text.svg" alt="homigo-logo" />
       </div>
@@ -31,7 +31,7 @@ const Landing = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Landing;
+export default Landing

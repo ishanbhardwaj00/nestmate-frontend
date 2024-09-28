@@ -39,7 +39,7 @@ export default () => {
   const [requestPending, setRequestPending] = useState(false)
   if (loading || authenticated === null) return <Loading />
   return (
-    <div className="flex flex-col items-center bg-step2 bg-contain bg-no-repeat h-screen max-h-screen bg-bottom bg-auto">
+    <div className="flex flex-col items-center bg-step2 bg-contain bg-no-repeat dvh bg-bottom bg-auto">
       <div className="items-center w-3/4">
         <button onClick={() => navigate('/')} className="mt-8 self-start">
           <FaChevronLeft color="#232beb" size={24} />
