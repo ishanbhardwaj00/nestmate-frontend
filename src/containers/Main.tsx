@@ -72,7 +72,9 @@ const Main = () => {
                       <span className="font-poppins-semi text-base">
                         About Me
                       </span>
-                      <span className="font-light text-sm">{user?.metaDat?.bio}</span>
+                      <span className="font-light text-sm">
+                        {user?.metaDat?.bio}
+                      </span>
                     </div>
                     <div className="flex flex-col gap-2">
                       <span className="font-poppins-semi text-base">
@@ -101,12 +103,12 @@ const Main = () => {
                         <div className="flex flex-wrap gap-6px">
                           {user?.hobbies?.interests.map(
                             (value: string, idx: number) => (
-                              <div
+                              <span
                                 key={idx}
-                                className="py-1 px-3 text-sm bg-transparent rounded-full border border-solid border-black w-max capitalize font-light"
+                                className="py-1 px-3 text-sm bg-transparent rounded-full text-center  border border-solid border-black w-max capitalize font-light"
                               >
                                 {value}
-                              </div>
+                              </span>
                             )
                           )}
                         </div>
