@@ -83,31 +83,12 @@ const Chats = () => {
 
   return (
     <div className="flex flex-col flex-1 gap-2 fade-in-scale-up overflow-scroll">
-      <div className="flex flex-col py-7 px-7 gap-5">
-        <span className="capitalize text-lg text-gray-dark font-medium">
-          queued (2)
-        </span>
-        <div className="flex gap-4">
-          <span className="border-2 border-primary solid rounded-full h-24 w-24">
-            <img
-              src="/images/matched_dp.jpg"
-              className="h-full w-full bg-cover rounded-full"
-            />
-          </span>
-          <span className="border-2 border-primary solid rounded-full h-24 w-24">
-            <img
-              src="/images/matched_dp.jpg"
-              className="h-full w-full bg-cover rounded-full"
-            />
-          </span>
-        </div>
-      </div>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 mt-9">
         <span className="capitalize text-gray-dark text-lg font-medium px-7">
-          recents
+          Your Conversations
         </span>
         {/* cards */}
-        <div className="flex flex-col gap-2 p-1">
+        <div className="flex flex-col gap-3 p-1">
           {Object.entries(chats).map(([senderId, chat], index) => {
             console.log(user, chat)
 
@@ -119,25 +100,25 @@ const Chats = () => {
                 }}
                 className="flex w-full p-1 px-7 gap-4 active:bg-slate-200 rounded-2xl items-center"
               >
-                <div className="rounded-full h-20 w-20">
+                <div className="rounded-full h-18 w-18">
                   <img
                     src={matches[senderId]?.metaDat?.image}
                     className="h-full w-full object-cover rounded-full"
                   />
                 </div>
                 <div className="flex flex-col justify-center flex-1 max-w-40 ">
-                  <span className="capitalize text-lg font-medium text-ellipsis overflow-hidden whitespace-nowrap">
+                  <span className="capitalize text-base font-poppins-medium text-ellipsis overflow-hidden whitespace-nowrap">
                     {matches[senderId]?.userDetails?.fullName?.split(' ')[0]}
                   </span>
                   {chat?.lastMessage?.sender !== user?._id &&
                   !chat?.lastMessage?.readBy?.includes(user?._id) ? (
-                    <div className="text-black font-medium w-fulltext-base truncate">
+                    <div className="text-black text-sm font-poppins-medium w-fulltext-base truncate">
                       <span>
                         {chat?.messages.at(chat?.messages.length - 1)?.content}
                       </span>
                     </div>
                   ) : (
-                    <div className="text-gray-dark flex gap-1 text-lg truncate ">
+                    <div className="text-gray-dark text-sm flex gap-1 text-lg truncate ">
                       {chat?.lastMessage?.sender === user._id && (
                         <span>You:</span>
                       )}
@@ -147,7 +128,7 @@ const Chats = () => {
                     </div>
                   )}
                 </div>
-                <div className="text-base text-gray-dark">
+                <div className="text-sm text-gray-dark">
                   {formatRelativeTime(
                     moment(chat?.lastMessage?.updatedAt).fromNow()
                   )}

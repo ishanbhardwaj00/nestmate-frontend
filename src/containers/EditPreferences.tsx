@@ -22,7 +22,7 @@ const EditPreferences = () => {
   })
   return (
     <div className="flex flex-1 flex-col fade-in-scale-up overflow-y-scroll gap-8 pb-10 bg-nav-light">
-      <div className="flex justify-between fixed z-50 font-semibold p-6 bg-nav-light w-full ">
+      <div className="flex justify-between fixed z-50 font-semibold px-9 py-3 bg-nav-light w-full ">
         <span
           onClick={() => {
             navigate(-1)
@@ -33,18 +33,18 @@ const EditPreferences = () => {
         </span>
         <span className="text-base text-primary ">Save</span>
       </div>
-      <div className="flex flex-col gap-6 w-full pl-10 pr-6">
+      <div className="flex flex-col gap-8 w-full pl-10 pr-6 mt-20">
         {questionnaire.map((question) => (
           <div key={question.id} className="flex flex-col capitalize gap-1">
-            <div className="font-medium text-base">{question.heading}</div>
+            <div className="font-poppins-medium text-button-radio-button text-base">{question.heading}</div>
             <div className="flex flex-row gap-2 align items-start flex-wrap">
               {question.options.map((option, index) => (
                 <label
                   key={option}
-                  className="flex text-sm items-center py-2 px-3 border-solid border border-black rounded-full has-[:checked]:bg-button-primary has-[:checked]:border-button-primary"
+                  className="flex  text-sm items-center py-2 px-3 border-solid border border-black rounded-full has-[:checked]:bg-button-primary has-[:checked]:border-button-primary"
                   htmlFor={option}
                 >
-                  <span className="w-max">{option}</span>
+                  <span className="w-max text-sm text-button-radio-button">{option}</span>
                   <input
                     {...register(`${question.id}`, {
                       required: 'This field is required',

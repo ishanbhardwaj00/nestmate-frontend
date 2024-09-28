@@ -489,3 +489,14 @@ template {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
+
+.h-18 {
+  height: 69px;
+}
+.w-18 {
+  width: 69px;
+}
+
+.gap-6px {
+  gap: 6px;
+}

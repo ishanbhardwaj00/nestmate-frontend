@@ -47,35 +47,35 @@ const Main = () => {
                   />
                   <div className="ml-2 flex flex-col gap-3">
                     <div className="flex flex-col mt-5 gap-1">
-                      <span className="text-3xl font-poppins-semi leading-sm">
+                      <span className="text-2xl font-poppins-semi leading-sm">
                         {user?.userDetails?.fullName?.split(' ')[0]},{' '}
                         {calculateAge(user?.userDetails?.dateOfBirth)}
                       </span>
-                      <span className="text-lg font-poppins-light">
+                      <span className="text-base font-poppins-light">
                         {user?.userDetails?.location}
                       </span>
                     </div>
-                    <div className="flex text-primary items-center gap-1 mt-2">
+                    <div className="flex text-primary items-center gap-2 mt-2">
                       <img
                         src="/images/friendship.svg"
                         className="h-6 w-6"
                         alt=""
                       />
-                      <span className="font-bold text-xl">
+                      <span className="font-bold text-lg">
                         {parseInt(user?.similarity)}% Match
                       </span>
                     </div>
                   </div>
 
                   <div className="w-full bg-userdetails mt-5 flex flex-col gap-8 py-4 px-5 rounded-xl justify-center">
-                    <div className="flex flex-col gap-1">
-                      <span className="font-poppins-medium text-lg">
+                    <div className="flex flex-col gap-2">
+                      <span className="font-poppins-semi text-base">
                         About Me
                       </span>
-                      <span className="font-light ">{user?.metaDat?.bio}</span>
+                      <span className="font-light text-sm">{user?.metaDat?.bio}</span>
                     </div>
                     <div className="flex flex-col gap-2">
-                      <span className="font-poppins-medium text-lg">
+                      <span className="font-poppins-semi text-base">
                         Basic Info
                       </span>
                       {user?.hobbies && (
@@ -85,7 +85,7 @@ const Main = () => {
                             .map(([key, value], idx) => (
                               <div
                                 key={idx}
-                                className="p-3 bg-transparent rounded-full border border-solid border-black w-max capitalize font-light "
+                                className="py-1 px-3 bg-transparent rounded-full text-sm border border-solid border-black w-max capitalize font-poppins-light "
                               >
                                 {value as string}
                               </div>
@@ -93,17 +93,17 @@ const Main = () => {
                         </div>
                       )}
                     </div>
-                    <div className="flex flex-col gap-2">
-                      <span className="font-poppins-medium text-lg">
+                    <div className="flex flex-col gap-6px">
+                      <span className="font-poppins-semi text-base">
                         Hobbies & Interests
                       </span>
                       {user?.hobbies?.interests && (
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-6px">
                           {user?.hobbies?.interests.map(
                             (value: string, idx: number) => (
                               <div
                                 key={idx}
-                                className="p-3 bg-transparent rounded-full border border-solid border-black w-max capitalize font-light"
+                                className="py-1 px-3 text-sm bg-transparent rounded-full border border-solid border-black w-max capitalize font-light"
                               >
                                 {value}
                               </div>
@@ -119,7 +119,7 @@ const Main = () => {
                         navigate(`/chats/${user?._id}`)
                         localStorage.setItem('swiperIndex', String(ind))
                       }}
-                      className="w-11/12 rounded-full bg-button-primary py-3 text-2xl font-bold text-primary mt-6"
+                      className="w-11/12 rounded-full bg-button-primary py-3 text-2xl font-poppins-semi text-primary mt-6"
                     >
                       Message
                     </button>

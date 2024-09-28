@@ -124,7 +124,7 @@ const UserChat = () => {
                 className="h-full w-full object-cover rounded-full"
               />
             </span>
-            <span className="capitalize text-xl font-semibold ">
+            <span className="capitalize text-lg font-poppins-medium ">
               {matches[userId]?.userDetails?.fullName}
             </span>
           </div>
@@ -147,7 +147,7 @@ const UserChat = () => {
               return (
                 <span
                   key={index}
-                  className="animateSenderChat self-start max-w-3/4 p-3 items-center rounded-tl-xl rounded-tr-xl rounded-br-xl bg-chat text-wrap"
+                  className="animateSenderChat text-lg self-start max-w-3/4 p-3 items-center rounded-tl-xl rounded-tr-xl rounded-br-xl bg-chat text-wrap"
                 >
                   {message?.content}
                 </span>
@@ -156,7 +156,7 @@ const UserChat = () => {
               return (
                 <span
                   key={index}
-                  className="animateRecieverChat self-end max-w-3/4 p-3  rounded-tl-xl items-center  rounded-tr-xl rounded-bl-xl bg-primary-light text-white text-wrap"
+                  className="animateRecieverChat text-lg self-end max-w-3/4 p-3  rounded-tl-xl items-center  rounded-tr-xl rounded-bl-xl bg-primary-light text-white text-wrap"
                 >
                   {message?.content}
                 </span>
