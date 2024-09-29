@@ -44,9 +44,8 @@ export default ({ setStep }: { setStep: any }) => {
       <div className="w-3/4  flex flex-col justify-evenly gap-8 mt-8">
         <button
           onClick={async () => {
-            const response = await axios.post(
+            const response = await axios.get(
               'https://nestmate-backend-production.up.railway.app/api/users/logout',
-              {},
               { withCredentials: true }
             )
             console.log(response)
