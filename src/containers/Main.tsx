@@ -20,7 +20,7 @@ const Main = () => {
 
   if (matches === null) return <Loading />
   return (
-    <div className="flex flex-1 w-screen overflow-scroll bg-match bg-auto bg-center bg-no-repeat p-8 fade-in bg-home-light ">
+    <div className="flex flex-1 w-screen dvh overflow-scroll bg-match bg-auto bg-center bg-no-repeat p-8 fade-in bg-home-light ">
       <Swiper
         ref={swiperRef}
         className="flex rounded-2xl"

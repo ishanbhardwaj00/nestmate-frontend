@@ -509,5 +509,5 @@ template {
 }
 
 .dvh {
-  height: 100vh;
+  height: 100dvh;
 }
