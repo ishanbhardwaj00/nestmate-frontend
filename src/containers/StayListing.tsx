@@ -40,9 +40,9 @@ const StayListing = () => {
               alt=""
             />
           </span>
-          <span className="text-xs font-">{stay?.CLASS_HEADING}</span>
+          <span className="text-xs capitalize">{stay?.CLASS_HEADING}</span>
         </div>
-        <span className="text-2xl font-poppins-semi leading-7">
+        <span className="text-2xl font-poppins-semi leading-7 capitalize">
           {stay.PROP_HEADING}
         </span>
         <table className="table-auto text-sm w-full border-collapse">
@@ -55,7 +55,7 @@ const StayListing = () => {
               <td className="border px-4 py-2 font-poppins-medium">
                 {stay.PROPERTY_TYPE}
               </td>
-              <td className="border px-4 py-2">Residential</td>
+              <td className="border px-4 py-2">Property Type</td>
             </tr>
             <tr>
               <td className="border px-4 py-2 font-poppins-medium">Rent</td>
