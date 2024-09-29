@@ -21,7 +21,7 @@ export default ({ setStep }: { setStep: any }) => {
 
   if (loading) return <Loading />
   return (
-    <div className="flex flex-col items-center bg-step1 bg-contain bg-no-repeat h-screen max-h-screen bg-bottom ">
+    <div className="flex flex-col items-center bg-step1 bg-contain bg-no-repeat dvh bg-bottom ">
       <div className="w-3/4 flex flex-col justify-start mt-10 gap-12 animateRegistration">
         <button onClick={() => navigate('/')}>
           <FaChevronLeft color="#232beb" size={24} />

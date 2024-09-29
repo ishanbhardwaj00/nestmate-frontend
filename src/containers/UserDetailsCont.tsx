@@ -34,13 +34,15 @@ export default ({ setStep }: { setStep: any }) => {
   }, [])
   return (
     // <div className="flex flex-col items-center justify-center bg-custom-pattern bg-no-repeat bg-center bg-cover animateRegistration overflow-scroll">
-    <div className="flex flex-col items-center justify-center  animateRegistration overflow-scroll">
+    <div className="flex flex-col items-center dvh justify-center  animateRegistration overflow-scroll">
       <div className="w-3/4  py-16 flex flex-col justify-between gap-8">
         <button onClick={() => setStep((step: any) => step - 1)}>
-          <FaChevronLeft color='#232beb' size={24} />
+          <FaChevronLeft color="#232beb" size={24} />
         </button>
         <div className="flex flex-col gap-2">
-          <div className={`flex flex-col text-4xl font-poppins-bold text-primary `}>
+          <div
+            className={`flex flex-col text-4xl font-poppins-bold text-primary `}
+          >
             <span>Let's Get To</span>
             <span>Know You A</span>
             <span>Liiittle Better...</span>
@@ -91,7 +93,9 @@ export default ({ setStep }: { setStep: any }) => {
                     className="flex text-base items-center py-2 px-3 border-solid border border-button-radio-button rounded-full has-[:checked]:bg-button-primary has-[:checked]:border-button-primary"
                     htmlFor={option}
                   >
-                    <span className="w-max text-button-radio-button">{option}</span>
+                    <span className="w-max text-button-radio-button">
+                      {option}
+                    </span>
                     <input
                       {...register(`${question.id}`, {
                         required: 'This field is required',

@@ -35,13 +35,15 @@ export default ({ setStep }: { setStep: any }) => {
   })
 
   return (
-    <div className="flex flex-col items-center justify-center bg-custom-pattern bg-no-repeat bg-center bg-cover animateRegistration overflow-scroll">
+    <div className="flex flex-col items-center justify-center bg-custom-pattern bg-no-repeat bg-center bg-cover animateRegistration overflow-scrollh-screen max-h-screen dvh">
       <div className="w-3/4  my-16 flex flex-col justify-between gap-14">
         <button onClick={() => setStep((step: number) => step - 1)}>
-          <FaChevronLeft color='#232beb' size={24} />
+          <FaChevronLeft color="#232beb" size={24} />
         </button>
         <div className="flex flex-col gap-2">
-          <div className={`flex flex-col text-4xl font-poppins-bold text-primary `}>
+          <div
+            className={`flex flex-col text-4xl font-poppins-bold text-primary `}
+          >
             <span>What are your</span>
             <span>Roommate</span>
             <span>Preferences?</span>
@@ -63,7 +65,9 @@ export default ({ setStep }: { setStep: any }) => {
         >
           <div className="flex flex-col text-button-radio-button gap-2">
             <span>
-              <p className="text-sm font-poppins-medium">Where Would You Prefer To Stay?</p>
+              <p className="text-sm font-poppins-medium">
+                Where Would You Prefer To Stay?
+              </p>
             </span>
             <div className="flex flex-col">
               {locations.map((location, index) => (
@@ -136,7 +140,9 @@ export default ({ setStep }: { setStep: any }) => {
           </div>
           <div className="flex flex-col text-button-radio-button font-semibold gap-2">
             <div className="flex flex-col gap-1">
-              <p className="text-sm font-poppins-medium">What is your preferred lease duration?</p>
+              <p className="text-sm font-poppins-medium">
+                What is your preferred lease duration?
+              </p>
               <p className="text-xs font-thin text-button-radio-button"></p>
               <div className="flex gap-1 flex-wrap ">
                 {['No lease', '3 months', '6 months', '12 months'].map(

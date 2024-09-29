@@ -31,7 +31,7 @@ export default ({
   const [requestPending, setRequestPending] = useState(false)
 
   return (
-    <div className="flex flex-col items-center bg-step2 bg-contain bg-no-repeat h-screen max-h-screen bg-bottom">
+    <div className="flex flex-col items-center bg-step2 bg-contain bg-no-repeat dvh bg-bottom">
       <div className="w-3/4 flex flex-col justify-start mt-10 gap-24 animateRegistration">
         <div className="flex flex-col gap-12">
           <button className="text-black" onClick={() => navigate('/')}>
