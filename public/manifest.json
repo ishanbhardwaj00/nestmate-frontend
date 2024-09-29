@@ -2,8 +2,8 @@
   "name": "NestMate | Your Nest, Your Perfect Roomie",
   "short_name": "NestMate",
   "start_url": "/",
-  "display": "standalone",
   "background_color": "#ffffff",
+  "display": "standalone",
   "theme_color": "#ffffff",
   "icons": [
     {
