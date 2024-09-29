@@ -44,7 +44,7 @@ export default ({ setStep }: { setStep: any }) => {
   // const router = useRouter();
   const [requestPending, setRequestPending] = useState(false)
   return (
-    <div className="flex flex-col items-center justify-center dvh bg-custom-pattern bg-no-repeat bg-center bg-cover animateRegistration overflow-scroll">
+    <div className="flex flex-col items-center justify-center bg-custom-pattern bg-no-repeat bg-center bg-cover animateRegistration overflow-scroll">
       <div className="w-3/4  py-8 flex flex-col justify-between gap-12">
         <button onClick={() => setStep((step: number) => step - 1)}>
           <FaChevronLeft color="#232beb" size={24} />

@@ -35,7 +35,7 @@ export default ({ setStep }: { setStep: any }) => {
   })
 
   return (
-    <div className="flex flex-col items-center justify-center bg-custom-pattern bg-no-repeat bg-center bg-cover animateRegistration overflow-scrollh-screen max-h-screen dvh">
+    <div className="flex flex-col items-center justify-center bg-custom-pattern bg-no-repeat bg-center bg-cover animateRegistration overflow-scroll">
       <div className="w-3/4  my-16 flex flex-col justify-between gap-14">
         <button onClick={() => setStep((step: number) => step - 1)}>
           <FaChevronLeft color="#232beb" size={24} />
