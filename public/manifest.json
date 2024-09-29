@@ -3,7 +3,7 @@
   "short_name": "NestMate",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#232beb",
+  "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "icons": [
     {
