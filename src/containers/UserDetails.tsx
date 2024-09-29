@@ -40,7 +40,7 @@ export default ({ setStep }: { setStep: any }) => {
   const navigate = useNavigate()
   if (loading) return <Loading />
   return (
-    <div className="flex flex-col items-center justify-center dvh bg-bottom animateRegistration">
+    <div className="flex flex-col items-center justify-center h-screen overflow-scroll bg-bottom animateRegistration">
       <div className="w-3/4  flex flex-col justify-evenly gap-8 mt-8">
         <button
           onClick={async () => {
